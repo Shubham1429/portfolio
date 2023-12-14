@@ -22,14 +22,14 @@ function ContactMe({ }: Props) {
     }
 
     return (
-        <div className="h-screen flex md:relative flex-col text-center md:text-left md:flex-row max-w-7xl mx-auto justify-evenly px-10 items-center">
-            <h3 className="md:absolute md:top-24 uppercase md:tracking-[20px] tracking-[10px] text-gray-500 text-2xl flex mt-20 md:mt-0">Contact</h3>
+        <div className="h-screen flex md:relative flex-col text-center md:text-left md:flex-row max-w-7xl mx-auto md:justify-evenly px-10 items-center justify-start gap-9 md:gap-0">
+            <h3 className="md:absolute md:top-24 uppercase md:tracking-[20px] tracking-[10px] text-gray-500 text-2xl flex mt-28 md:mt-0">Contact</h3>
             <div className="flex flex-col space-y-8 md:space-y-10 md:mt-20">
                 <h4 className="text-lg md:text-2xl font-semibold text-center">
                     I have got just what you need. {" "}
                     <span className="decoration-[#F7Ab0A]/50 underline">Lets Talk.</span>
                 </h4>
-                <div className="md:space-y-5 space-y-2 flex items-baseline justify-evenly flex-col md:flex-row">
+                <div className="space-y-2 flex items-baseline justify-evenly flex-col md:flex-row md:gap-8">
                     <div className="flex items-center md:space-x-5 justify-center space-x-2">
                         <PhoneIcon className="text-[#f7ab0a] h-4 w-4 md:h-7 md:w-7 animate-pulse" />
                         <p className="text-xs md:text-lg">9654741157</p>
@@ -48,7 +48,7 @@ function ContactMe({ }: Props) {
                     <textarea {...register('message')} placeholder="Message" className="contactInput" />
                     <button
                         type="submit"
-                        className="bg-[#f7ab0a] py-5 px-10 rounded-md text-black font-bold text-lg"
+                        className="bg-[#f7ab0a]  py-3 md:py-5 px-10 rounded-md text-black font-bold text-lg"
                     >
                         Submit
                     </button>

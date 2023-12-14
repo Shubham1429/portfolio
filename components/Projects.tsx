@@ -18,9 +18,9 @@ function Projects({ projects }: Props) {
         >
             <h3 className="absolute top-24 uppercase tracking-[10px] md:tracking-[20px] text-gray-500 text-2xl">Projects</h3>
 
-            <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin">
+            <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin space-y-4">
                 {projects?.map((project, index) => (
-                    <div key={index} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-10 md:p-44 h-screen'>
+                    <div key={index} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-10 md:p-44 md:h-screen'>
                             <motion.img
                                 initial={{
                                     y: -300,
@@ -31,11 +31,11 @@ function Projects({ projects }: Props) {
                                 viewport={{ once: true }}
                                 src={urlFor(project?.image).url()}
                                 alt=""
-                                className="object-contain object-center md:h-[350px] md:w-[350px]"
+                                className="object-contain object-center w-[280px] h-[280px] md:h-[350px] md:w-[350px]"
                             />                        
                         <div className="space-y-8 px-0 md:px-10 max-w-6xl">
                             <h4 className="text-xl md:text-3xl font-semibold text-center flex items-center space-x-4 justify-center">
-                                <p className='uppercase decoration-[#F7AB0A]/50'>{project.title}</p>
+                                <p className='uppercase text-base md:text-xl decoration-[#F7AB0A]/50'>{project.title}</p>
                                 <SocialIcon 
                                     network='github'
                                     bgColor='white'
@@ -58,7 +58,7 @@ function Projects({ projects }: Props) {
                             ))}
 
                         </div>
-                        <p className="text-center md:text-left">{project?.summary}</p>
+                        <p className="text-sm md:text-base text-center md:text-left">{project?.summary}</p>
                     </div>
                 ))}
 

@@ -23,13 +23,14 @@ function Skill({ directionLeft, directionRight, skill }: Props) {
                 x: 0
             }}
             viewport={{ once: true }}
+            className='flex flex-col items-center justify-center text-center gap-2 md:gap-0'
             >
             <img 
                 src={urlFor(skill.image).url()}
                 alt=""
                 className="rounded-full border border-gray-500 object-cover h-16 w-16 md:h-20 md:w-20 xl:w-20 xl:h-20 filter grayscale group-hover:grayscale-0 transition duration-300 ease-in-out" 
             />
-            <p className='text-sm tracking-[1px]'>{skill.title}</p>
+            <p className='md:text-sm tracking-[1px] text-[10px]'>{skill.title}</p>
 
         </motion.div>
     </div>
